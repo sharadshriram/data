@@ -131,7 +131,7 @@ def generate_aggregates(df: pd.DataFrame,
     aggregate_df = aggregate_df.melt(id_vars=groupby_cols,
                                      value_vars=_STAT_COLS)
     # add additional columns
-    aggregate_df['observationPeriod'] = 'P1Y'
+    aggregate_df['observationPeriod'] = 'P1M'
     aggregate_df['measurementMethod'] = f'dcAggregate/{_MMETHOD}'
 
     return aggregate_df
